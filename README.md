@@ -1,4 +1,4 @@
-# Welcome, [OWNER NAME]
+# Welcome, Debra
 
 This is your website. To make changes, just talk to Claude.
 
@@ -72,7 +72,7 @@ A few things stay off-limits unless you ask for them specifically:
 
 - The **privacy policy** and **terms and conditions** pages — legal copy,
   edited only on request.
-- The **domain configuration** (the part that points [DOMAIN] at this site) —
+- The **domain configuration** (the part that points theprobookeditor.com at this site) —
   your site admin's job.
 - The **automated parts** behind the scenes — same.
 

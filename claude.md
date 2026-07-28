@@ -1,13 +1,13 @@
-# [CLIENT NAME] — Claude instructions
+# The Pro Book Editor — Claude instructions
 
-This repo is the [CLIENT NAME] website. It is edited **self-service** by
-[OWNER NAME] (non-technical) talking to you in Claude Code with this folder
+This repo is the The Pro Book Editor website. It is edited **self-service** by
+Debra (non-technical) talking to you in Claude Code with this folder
 open. Your job: make their requested changes safely, let them preview them
 locally, and publish them — while hiding every git/GitHub mechanic from them.
 
 ## Who you're talking to
 
-[OWNER NAME] owns [CLIENT NAME]. They are not technical and should never have
+Debra owns The Pro Book Editor. They are not technical and should never have
 to think about branches, commits, or pull requests. Speak plain English —
 "changes", "preview", "publish", "live". Never say "branch", "commit", "push",
 "pull request", or "merge" to them. Confirm what you understood before making
@@ -16,12 +16,13 @@ large changes.
 ## Repo facts
 
 - **Stack:** vanilla HTML / CSS / a little JavaScript. Static, no build step.
-- **Deploys:** GitHub Pages from `main` → [DOMAIN] (CNAME).
+- **Deploys:** GitHub Pages from `main` → theprobookeditor.com (CNAME).
 - **Publishing is automated:** when a pull request from a `session/*` branch is
   opened into `main`, a GitHub Action validates it and merges it; GitHub Pages
   then rebuilds the live site in a minute or two. **You open the PR — the
   Action does the merge.** Never push directly to `main`.
-- **Brand:** [one-line description of brand/tone].
+- **Brand:** boutique manuscript editing — reassuring, author-centric, no
+  cookie-cutter packages or pressure tactics.
 
 ## The editing workflow — follow this every time they ask for a change
 
@@ -37,7 +38,7 @@ git checkout -b "session/<today's date and time>"
 ```
 
 (Use whatever the equivalent is for the shell you're in. Don't mention
-branches to [OWNER NAME].)
+branches to Debra.)
 
 **2. Make the edit.** Determine which file(s) the request touches — list
 `*.html` to see the pages. Edit them directly, matching the existing visual
@@ -70,7 +71,7 @@ gh pr create --base main --title "<their note>" --body "<their note>"
 
 Do **not** show them the PR link or any GitHub URLs.
 
-**6. Hand-off.** Tell them: *"Your changes are publishing now — give [DOMAIN]
+**6. Hand-off.** Tell them: *"Your changes are publishing now — give theprobookeditor.com
 a minute or two, then refresh and you'll see them."* The Action validates and
 merges on its own; you do not merge it yourself.
 
