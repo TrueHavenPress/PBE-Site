@@ -63,11 +63,26 @@
 
       <section>
         <h2>Get Your Free Printable Toolkit</h2>
-        <p>Email us and we'll send you the free printable download for <em>Dialogue That Speaks</em>, plus periodic emails sharing more craft tips, revision insights, and the occasional dose of writing inspiration.</p>
+        <p>Sign up and we'll send you the free printable download for <em>Dialogue That Speaks</em>, plus periodic emails sharing more craft tips, revision insights, and the occasional dose of writing inspiration.</p>
         <p>That's it. No daily sales pitches, no inbox clutter. We respect your time (and your right to unsubscribe).</p>
-        <p class="btn-row">
-          <a class="btn" href="mailto:theprobookeditor@outlook.com?subject=Free%20Printable%20Toolkit">Email Us for Your Free Toolkit</a>
-        </p>
+
+        <form id="toolkitForm" class="contact-form" style="max-width: 24rem;"
+              action="https://doxdev.app.n8n.cloud/webhook/pbe-site-toolkit-signup"
+              method="POST" novalidate>
+          <div style="position:absolute;left:-9999px" aria-hidden="true">
+            <label for="t-website">Website (leave blank)</label>
+            <input type="text" id="t-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="t-email">Email *</label>
+            <input id="t-email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn">Send Me the Free Toolkit</button>
+            <p id="toolkitStatus" class="submit-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+        <p class="fallback-note">By signing up you agree to receive the toolkit and occasional craft-tip emails from The Pro Book Editor. Unsubscribe any time. Prefer email? Reach us directly at <a href="mailto:theprobookeditor@outlook.com">theprobookeditor@outlook.com</a>.</p>
       </section>
 
       <section>

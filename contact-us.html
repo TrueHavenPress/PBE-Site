@@ -35,27 +35,84 @@
     <div class="wrap">
       <section>
         <h2>Request Your Free Sample Edit and Manuscript Assessment</h2>
-        <p>Managing Editor Debra L. Hartmann will reply to your email within 1 business day and request your manuscript Word document.</p>
-        <p class="btn-row">
-          <a class="btn" href="mailto:theprobookeditor@outlook.com?subject=Free%20Sample%20Edit%20Request">Email theprobookeditor@outlook.com</a>
-        </p>
+        <p>Managing Editor Debra L. Hartmann will reply to your submission within 1 business day and request your manuscript Word document.</p>
 
-        <div class="note-box">
-          <p><strong>Copy the questionnaire below into your email</strong>, fill it out, and attach your manuscript Word document:</p>
-          <ul class="factor-list">
-            <li>Your Name</li>
-            <li>Book Title</li>
-            <li>Genre</li>
-            <li>Word Count</li>
-            <li>US English or UK English? (For nonfiction works, please indicate US/UK and the additional style guide for your topic area, i.e. APA, medical journal submission requirements doc, etc.)</li>
-            <li>Book Description / Synopsis (even the roughest first draft is perfectly fine)</li>
-            <li>When will you be finished writing and self-editing and ready to begin working?</li>
-            <li>What kind of editing do you feel is needed?</li>
-            <li>Have you worked with an editor before? What are your expectations?</li>
-            <li>Have you used Track Changes before?</li>
-            <li>Will you be self-publishing or submitting your manuscript to agents/publishers?</li>
-          </ul>
-        </div>
+        <form id="contactForm" class="contact-form"
+              action="https://doxdev.app.n8n.cloud/webhook/pbe-site-contact"
+              method="POST" novalidate>
+          <div style="position:absolute;left:-9999px" aria-hidden="true">
+            <label for="c-website">Website (leave blank)</label>
+            <input type="text" id="c-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <p class="submit-intro">Required fields are marked with <span aria-hidden="true">*</span>.</p>
+
+          <div class="field">
+            <label for="c-name">Your Name *</label>
+            <input id="c-name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="c-email">Email *</label>
+            <input id="c-email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="c-title">Book Title *</label>
+            <input id="c-title" name="bookTitle" type="text" required>
+          </div>
+          <div class="field">
+            <label for="c-genre">Genre *</label>
+            <input id="c-genre" name="genre" type="text" required>
+          </div>
+          <div class="field">
+            <label for="c-words">Word Count</label>
+            <input id="c-words" name="wordCount" type="text">
+          </div>
+
+          <div class="field checkbox-group" data-group-required="englishVariant">
+            <span class="label-as-block">US English or UK English? *</span>
+            <p class="field-hint">For nonfiction works, please indicate US/UK and the additional style guide for your topic area, i.e. APA, medical journal submission requirements doc, etc.</p>
+            <label><input type="checkbox" name="englishVariant" value="US"> US</label>
+            <label><input type="checkbox" name="englishVariant" value="UK"> UK</label>
+          </div>
+
+          <div class="field">
+            <label for="c-synopsis">Book Description / Synopsis *</label>
+            <small class="field-hint">Even the roughest first draft is perfectly fine.</small>
+            <textarea id="c-synopsis" name="synopsis" required></textarea>
+          </div>
+          <div class="field">
+            <label for="c-ready">When will you be finished writing and self-editing and ready to begin working? *</label>
+            <input id="c-ready" name="readyDate" type="text" required>
+          </div>
+          <div class="field">
+            <label for="c-editing">What kind of editing do you feel is needed? *</label>
+            <textarea id="c-editing" name="editingNeeded" required></textarea>
+          </div>
+          <div class="field">
+            <label for="c-experience">Have you worked with an editor before? What are your expectations? *</label>
+            <textarea id="c-experience" name="editorExperience" required></textarea>
+          </div>
+
+          <div class="field checkbox-group" data-group-required="trackChanges">
+            <span class="label-as-block">Have you used Track Changes before? *</span>
+            <label><input type="checkbox" name="trackChanges" value="Yes, I'm a pro!"> Yes, I'm a pro!</label>
+            <label><input type="checkbox" name="trackChanges" value="No, never heard of it before."> No, never heard of it before. (Don't worry! We'll show you how.)</label>
+            <label><input type="checkbox" name="trackChanges" value="Yes, but could use a refresher."> Yes, but could use a refresher.</label>
+          </div>
+
+          <div class="field checkbox-group" data-group-required="publishingPath">
+            <span class="label-as-block">Will you be self-publishing or submitting your manuscript to agents/publishers? *</span>
+            <label><input type="checkbox" name="publishingPath" value="self-publishing"> Self-publishing</label>
+            <label><input type="checkbox" name="publishingPath" value="seeking a contract"> Seeking a contract</label>
+            <label><input type="checkbox" name="publishingPath" value="no idea yet"> No idea yet</label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Submit</button>
+            <p id="contactStatus" class="submit-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+        <p class="fallback-note">Prefer email? Reach us directly at <a href="mailto:theprobookeditor@outlook.com">theprobookeditor@outlook.com</a>.</p>
 
         <p><a href="files/nda-theprobookeditor-iaps.pdf" target="_blank" rel="noopener">Download our NDA for your peace of mind</a>.</p>
       </section>
