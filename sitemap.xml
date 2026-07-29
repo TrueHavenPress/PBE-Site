@@ -4,4 +4,40 @@
     <loc>https://theprobookeditor.com/</loc>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://theprobookeditor.com/services.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://theprobookeditor.com/editing-costs.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://theprobookeditor.com/how-does-this-work.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://theprobookeditor.com/reviews.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://theprobookeditor.com/about.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://theprobookeditor.com/contact-us.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://theprobookeditor.com/toolkit-series.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://theprobookeditor.com/privacy-policy.html</loc>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://theprobookeditor.com/terms-and-conditions.html</loc>
+    <changefreq>yearly</changefreq>
+  </url>
 </urlset>
