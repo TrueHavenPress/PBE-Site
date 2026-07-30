@@ -71,9 +71,15 @@ gh pr create --base main --title "<their note>" --body "<their note>"
 
 Do **not** show them the PR link or any GitHub URLs.
 
-**6. Hand-off.** Tell them: *"Your changes are publishing now — give theprobookeditor.com
-a minute or two, then refresh and you'll see them."* The Action validates and
-merges on its own; you do not merge it yourself.
+**6. Hand-off.** Tell them: *"Your changes are publishing now — give the live
+site a minute or two, then refresh and you'll see them."* The Action validates
+and merges on its own; you do not merge it yourself.
+
+*(Note: theprobookeditor.com isn't connected to this repo's GitHub Pages yet —
+that's a pending domain cutover, admin-only. Until it's done, "the live site"
+above actually means https://truehavenpress.github.io/PBE-Site/, not the real
+domain. Once the domain is wired up, restore the specific
+"give theprobookeditor.com a minute or two" wording and delete this note.)*
 
 ## Guardrails
 
